@@ -93,7 +93,7 @@ async function init() {
     
     try {
         // Load museum/theater scene from GitHub Releases
-        const museumGLTF = await loader.loadAsync('https://github.com/ryyanwang/joanne_val/releases/download/v1.0/scene.glb');
+        const museumGLTF = await loader.loadAsync('https://github.com/ryyanwang/joanne_val/releases/download/v1.1/scene.glb');
         museum = museumGLTF.scene;
         museum.traverse((child) => {
             if (child.isMesh) {
@@ -107,7 +107,7 @@ async function init() {
         console.log('Museum loaded successfully');
 
         // Load Snoopy from GitHub Releases
-        const snoopyGLTF = await loader.loadAsync('https://github.com/ryyanwang/joanne_val/releases/download/v1.0/snoopy.1.glb');
+        const snoopyGLTF = await loader.loadAsync('https://github.com/ryyanwang/joanne_val/releases/download/v1.1/snoopy.1.glb');
         snoopy = snoopyGLTF.scene;
         snoopy.scale.setScalar(CONFIG.characterScale);
         snoopy.traverse((child) => {
