@@ -93,7 +93,7 @@ async function init() {
     
     try {
         // Load museum/theater scene from GitHub LFS
-        const museumGLTF = await loader.loadAsync('https://github.com/ryyanwang/joanne_val/raw/main/scene.glb');
+        const museumGLTF = await loader.loadAsync('https://media.githubusercontent.com/media/ryyanwang/joanne_val/main/scene.glb');
         museum = museumGLTF.scene;
         museum.traverse((child) => {
             if (child.isMesh) {
@@ -107,7 +107,7 @@ async function init() {
         console.log('Museum loaded successfully');
 
         // Load Snoopy from GitHub LFS
-        const snoopyGLTF = await loader.loadAsync('https://github.com/ryyanwang/joanne_val/raw/main/snoopy-vr/source/snoopy%20(1).glb');
+        const snoopyGLTF = await loader.loadAsync('https://media.githubusercontent.com/media/ryyanwang/joanne_val/main/snoopy-vr/source/snoopy%20(1).glb');
         snoopy = snoopyGLTF.scene;
         snoopy.scale.setScalar(CONFIG.characterScale);
         snoopy.traverse((child) => {
